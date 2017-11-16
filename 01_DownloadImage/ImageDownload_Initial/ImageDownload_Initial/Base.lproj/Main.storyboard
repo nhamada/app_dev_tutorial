@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageDownload_Initial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0iN-V2-IPl">
+                                <rect key="frame" x="140.5" y="20" width="94" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Au9-bI-VcR">
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                        <state key="normal" title="画像1"/>
+                                        <connections>
+                                            <action selector="onButtonForImage1Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MKD-zf-SKh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7h-Fq-hz7">
+                                        <rect key="frame" x="54" y="0.0" width="40" height="30"/>
+                                        <state key="normal" title="画像2"/>
+                                        <connections>
+                                            <action selector="onButtonForImage2Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UHM-hR-2MY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rxU-2T-kDh">
+                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rxU-2T-kDh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4a4-ml-hy3"/>
+                            <constraint firstItem="rxU-2T-kDh" firstAttribute="top" secondItem="0iN-V2-IPl" secondAttribute="bottom" constant="8" id="4bM-ni-eHi"/>
+                            <constraint firstItem="0iN-V2-IPl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7lL-2s-HaQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0iN-V2-IPl" secondAttribute="trailing" constant="16" id="Nmt-u9-5AR"/>
+                            <constraint firstItem="rxU-2T-kDh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NpH-X1-YKb"/>
+                            <constraint firstItem="rxU-2T-kDh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QWu-zW-ETE"/>
+                            <constraint firstItem="0iN-V2-IPl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WrV-CV-k5v"/>
+                            <constraint firstItem="0iN-V2-IPl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cNr-r2-Nxo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonForImage1" destination="Au9-bI-VcR" id="m6t-KI-ePT"/>
+                        <outlet property="buttonForImage2" destination="J7h-Fq-hz7" id="mG2-4l-MsQ"/>
+                        <outlet property="imageView" destination="rxU-2T-kDh" id="7R5-cv-EHo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>

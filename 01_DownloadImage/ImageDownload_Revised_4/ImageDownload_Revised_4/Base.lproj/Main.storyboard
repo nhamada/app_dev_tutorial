@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageDownload_Revised_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Aei-Bc-frf">
+                                <rect key="frame" x="16" y="20" width="343" height="29"/>
+                                <segments>
+                                    <segment title="画像1"/>
+                                    <segment title="画像2"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onImageSegmentedControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="pNd-nl-ICY"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j0u-9w-jb5">
+                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aei-Bc-frf" secondAttribute="trailing" constant="16" id="0Da-uc-GFS"/>
+                            <constraint firstItem="Aei-Bc-frf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ary-ns-TNt"/>
+                            <constraint firstItem="j0u-9w-jb5" firstAttribute="top" secondItem="Aei-Bc-frf" secondAttribute="bottom" constant="8" id="IQd-1o-vSi"/>
+                            <constraint firstItem="j0u-9w-jb5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U4M-Mp-KDL"/>
+                            <constraint firstItem="j0u-9w-jb5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aLQ-zR-WAr"/>
+                            <constraint firstItem="j0u-9w-jb5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="e5D-Vm-caB"/>
+                            <constraint firstItem="Aei-Bc-frf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="l9U-qv-B0k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="j0u-9w-jb5" id="HwM-kC-J2j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
